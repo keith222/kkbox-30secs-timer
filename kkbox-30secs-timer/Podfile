@@ -1,0 +1,14 @@
+# Uncomment the next line to define a global platform for your project
+platform :ios, '9.0'
+
+target 'kkbox-30secs-timer' do
+  # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for kkbox-30secs-timer
+  pod 'KKBOXOpenAPI', :git => 'https://github.com/KKBOX/OpenAPI-ObjectiveC.git'
+  pod 'ObjectMapper'
+  pod 'SwifterSwift' 
+  pod 'Alamofire', '~> 4.5'
+
+end
