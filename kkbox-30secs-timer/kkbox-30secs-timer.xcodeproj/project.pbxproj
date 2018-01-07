@@ -7,24 +7,41 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5308A4C81FFD2F9300F42DB4 /* AlarmSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5308A4C71FFD2F9300F42DB4 /* AlarmSettingViewController.swift */; };
+		5308A4CE1FFE652D00F42DB4 /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5308A4CD1FFE652D00F42DB4 /* CircleView.swift */; };
+		5308A4D01FFE6F3F00F42DB4 /* CountDownViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5308A4CF1FFE6F3F00F42DB4 /* CountDownViewController.swift */; };
 		533583CA1FFBF6F900EF26E5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533583C91FFBF6F900EF26E5 /* AppDelegate.swift */; };
 		533583CC1FFBF6F900EF26E5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533583CB1FFBF6F900EF26E5 /* ViewController.swift */; };
 		533583CF1FFBF6F900EF26E5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 533583CD1FFBF6F900EF26E5 /* Main.storyboard */; };
 		533583D11FFBF6F900EF26E5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 533583D01FFBF6F900EF26E5 /* Assets.xcassets */; };
 		533583D41FFBF6F900EF26E5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 533583D21FFBF6F900EF26E5 /* LaunchScreen.storyboard */; };
+		538947BB1FFE908D005EECC6 /* Timer-Bell.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 538947BA1FFE908D005EECC6 /* Timer-Bell.m4a */; };
+		538947BD1FFE9094005EECC6 /* message-02.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 538947BC1FFE9094005EECC6 /* message-02.m4a */; };
+		538947BF1FFFB57B005EECC6 /* CountdownCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 538947BE1FFFB57B005EECC6 /* CountdownCell.swift */; };
+		53ED938B2000126100BB2145 /* String+Addition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53ED938A2000126100BB2145 /* String+Addition.swift */; };
+		53ED938D2001417500BB2145 /* Int+Addition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53ED938C2001417500BB2145 /* Int+Addition.swift */; };
 		655C8FF135D2081CE62086FD /* Pods_kkbox_30secs_timer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F34E2CEC8AA8AAEA4731A3F8 /* Pods_kkbox_30secs_timer.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2930CE089953441BF2724DA9 /* Pods-kkbox-30secs-timer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kkbox-30secs-timer.release.xcconfig"; path = "Pods/Target Support Files/Pods-kkbox-30secs-timer/Pods-kkbox-30secs-timer.release.xcconfig"; sourceTree = "<group>"; };
 		51BD2DC658C3883E37FFD2AB /* Pods-kkbox-30secs-timer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kkbox-30secs-timer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-kkbox-30secs-timer/Pods-kkbox-30secs-timer.debug.xcconfig"; sourceTree = "<group>"; };
+		5308A4C21FFD189700F42DB4 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = "zh-Hant"; path = "zh-Hant.lproj/Main.storyboard"; sourceTree = "<group>"; };
+		5308A4C31FFD189700F42DB4 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = "zh-Hant"; path = "zh-Hant.lproj/LaunchScreen.storyboard"; sourceTree = "<group>"; };
+		5308A4C71FFD2F9300F42DB4 /* AlarmSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmSettingViewController.swift; sourceTree = "<group>"; };
+		5308A4C91FFD304400F42DB4 /* kkbox-bridging-header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "kkbox-bridging-header.h"; sourceTree = "<group>"; };
+		5308A4CD1FFE652D00F42DB4 /* CircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
+		5308A4CF1FFE6F3F00F42DB4 /* CountDownViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountDownViewController.swift; sourceTree = "<group>"; };
 		533583C61FFBF6F900EF26E5 /* kkbox-30secs-timer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "kkbox-30secs-timer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		533583C91FFBF6F900EF26E5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		533583CB1FFBF6F900EF26E5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		533583CE1FFBF6F900EF26E5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		533583D01FFBF6F900EF26E5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		533583D31FFBF6F900EF26E5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		533583D51FFBF6F900EF26E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		538947BA1FFE908D005EECC6 /* Timer-Bell.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Timer-Bell.m4a"; sourceTree = "<group>"; };
+		538947BC1FFE9094005EECC6 /* message-02.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "message-02.m4a"; sourceTree = "<group>"; };
+		538947BE1FFFB57B005EECC6 /* CountdownCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownCell.swift; sourceTree = "<group>"; };
+		53ED938A2000126100BB2145 /* String+Addition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Addition.swift"; sourceTree = "<group>"; };
+		53ED938C2001417500BB2145 /* Int+Addition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Addition.swift"; sourceTree = "<group>"; };
 		F34E2CEC8AA8AAEA4731A3F8 /* Pods_kkbox_30secs_timer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_kkbox_30secs_timer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -48,6 +65,34 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		5308A4C41FFD2F4B00F42DB4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5308A4CD1FFE652D00F42DB4 /* CircleView.swift */,
+				538947BE1FFFB57B005EECC6 /* CountdownCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5308A4C61FFD2F6C00F42DB4 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				533583CB1FFBF6F900EF26E5 /* ViewController.swift */,
+				5308A4C71FFD2F9300F42DB4 /* AlarmSettingViewController.swift */,
+				5308A4CF1FFE6F3F00F42DB4 /* CountDownViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		5308A4CA1FFD321600F42DB4 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				53ED938A2000126100BB2145 /* String+Addition.swift */,
+				53ED938C2001417500BB2145 /* Int+Addition.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		533583BD1FFBF6F900EF26E5 = {
 			isa = PBXGroup;
 			children = (
@@ -69,14 +114,27 @@
 		533583C81FFBF6F900EF26E5 /* kkbox-30secs-timer */ = {
 			isa = PBXGroup;
 			children = (
+				538947B91FFE907D005EECC6 /* Sound */,
+				5308A4CA1FFD321600F42DB4 /* Extension */,
+				5308A4C61FFD2F6C00F42DB4 /* Controller */,
+				5308A4C41FFD2F4B00F42DB4 /* View */,
 				533583C91FFBF6F900EF26E5 /* AppDelegate.swift */,
-				533583CB1FFBF6F900EF26E5 /* ViewController.swift */,
 				533583CD1FFBF6F900EF26E5 /* Main.storyboard */,
 				533583D01FFBF6F900EF26E5 /* Assets.xcassets */,
 				533583D21FFBF6F900EF26E5 /* LaunchScreen.storyboard */,
 				533583D51FFBF6F900EF26E5 /* Info.plist */,
+				5308A4C91FFD304400F42DB4 /* kkbox-bridging-header.h */,
 			);
 			path = "kkbox-30secs-timer";
+			sourceTree = "<group>";
+		};
+		538947B91FFE907D005EECC6 /* Sound */ = {
+			isa = PBXGroup;
+			children = (
+				538947BC1FFE9094005EECC6 /* message-02.m4a */,
+				538947BA1FFE908D005EECC6 /* Timer-Bell.m4a */,
+			);
+			path = Sound;
 			sourceTree = "<group>";
 		};
 		7F1220A527625442D501E511 /* Pods */ = {
@@ -123,7 +181,7 @@
 				TargetAttributes = {
 					533583C51FFBF6F900EF26E5 = {
 						CreatedOnToolsVersion = 9.2;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 				};
 			};
@@ -132,8 +190,7 @@
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				en,
-				Base,
+				"zh-Hant",
 			);
 			mainGroup = 533583BD1FFBF6F900EF26E5;
 			productRefGroup = 533583C71FFBF6F900EF26E5 /* Products */;
@@ -153,6 +210,8 @@
 				533583D41FFBF6F900EF26E5 /* LaunchScreen.storyboard in Resources */,
 				533583D11FFBF6F900EF26E5 /* Assets.xcassets in Resources */,
 				533583CF1FFBF6F900EF26E5 /* Main.storyboard in Resources */,
+				538947BD1FFE9094005EECC6 /* message-02.m4a in Resources */,
+				538947BB1FFE908D005EECC6 /* Timer-Bell.m4a in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -223,8 +282,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				538947BF1FFFB57B005EECC6 /* CountdownCell.swift in Sources */,
+				5308A4D01FFE6F3F00F42DB4 /* CountDownViewController.swift in Sources */,
 				533583CC1FFBF6F900EF26E5 /* ViewController.swift in Sources */,
+				5308A4CE1FFE652D00F42DB4 /* CircleView.swift in Sources */,
 				533583CA1FFBF6F900EF26E5 /* AppDelegate.swift in Sources */,
+				53ED938D2001417500BB2145 /* Int+Addition.swift in Sources */,
+				5308A4C81FFD2F9300F42DB4 /* AlarmSettingViewController.swift in Sources */,
+				53ED938B2000126100BB2145 /* String+Addition.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -234,7 +299,7 @@
 		533583CD1FFBF6F900EF26E5 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				533583CE1FFBF6F900EF26E5 /* Base */,
+				5308A4C21FFD189700F42DB4 /* zh-Hant */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -242,7 +307,7 @@
 		533583D21FFBF6F900EF26E5 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				533583D31FFBF6F900EF26E5 /* Base */,
+				5308A4C31FFD189700F42DB4 /* zh-Hant */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -254,6 +319,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -303,6 +369,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OBJC_BRIDGING_HEADER = "kkbox-30secs-timer/kkbox-bridging-header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -311,6 +378,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -352,6 +420,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "kkbox-30secs-timer/kkbox-bridging-header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -362,15 +431,18 @@
 			baseConfigurationReference = 51BD2DC658C3883E37FFD2AB /* Pods-kkbox-30secs-timer.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 8MREJM6257;
 				INFOPLIST_FILE = "kkbox-30secs-timer/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "sparkr.kkbox-30secs-timer";
+				PRODUCT_BUNDLE_IDENTIFIER = sparkr.boxtimer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "48a47f90-9337-48ad-bf75-5116d4704090";
+				PROVISIONING_PROFILE_SPECIFIER = "Development-BoxTimer";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -379,15 +451,18 @@
 			baseConfigurationReference = 2930CE089953441BF2724DA9 /* Pods-kkbox-30secs-timer.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 8MREJM6257;
 				INFOPLIST_FILE = "kkbox-30secs-timer/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "sparkr.kkbox-30secs-timer";
+				PRODUCT_BUNDLE_IDENTIFIER = sparkr.boxtimer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "e4f4ac92-1a5a-48bb-8b62-1294c8585ee4";
+				PROVISIONING_PROFILE_SPECIFIER = "Ad-Hoc BoxTimer";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
