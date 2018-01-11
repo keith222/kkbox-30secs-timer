@@ -9,19 +9,27 @@
 import UIKit
 import SwifterSwift
 
-class AlarmSettingViewController: UIViewController {
+protocol SendListDataDelegate {
+    func sendData(name: String, id: String)
+}
 
+class AlarmSettingViewController: UIViewController {
     
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var timeSettingTextField: UITextField!
+    @IBOutlet weak var selectButton: UIButton!
     
-    var countdownData: (index: Int, name: String, time: String, music: String)?
+    fileprivate var delegate: SendListDataDelegate?
+    fileprivate var music: String?
+    
+    var countdownData: (index: String, name: String, time: String, music: String)?
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         timeSettingTextField.delegate = self
         nameTextField.delegate = self
+        delegate = self
         
         setDoneButton()
         
@@ -33,6 +41,8 @@ class AlarmSettingViewController: UIViewController {
     private func setUp() {
         nameTextField.text = countdownData?.name
         timeSettingTextField.text = countdownData?.time
+        selectButton.setTitle(countdownData?.music.splitted(by: ";")[0], for: .normal)
+        music = countdownData?.music
     }
     
     private func setDoneButton() {
@@ -55,7 +65,7 @@ class AlarmSettingViewController: UIViewController {
     }
     
     @IBAction func saveAction(_ sender: UIButton) {
-        guard !(nameTextField.text?.isEmpty)! && !(timeSettingTextField.text?.isEmpty)! else {
+        guard !(nameTextField.text?.isEmpty)! && !(timeSettingTextField.text?.isEmpty)! && (selectButton.title(for: .normal) != "選擇音樂清單") else {
             let alertController = UIAlertController(title: "提示", message: "喔喔，資料沒有輸入完全唷！", preferredStyle: .alert)
                 
             alertController.addAction(UIAlertAction(title: "確定", style: .cancel, handler: nil))
@@ -63,17 +73,21 @@ class AlarmSettingViewController: UIViewController {
                 
             return
         }
-        
-        let data: [[String]] = [[nameTextField.text!, timeSettingTextField.text!, ""]]
+
+        var data: [[String]] = [["0", nameTextField.text!, timeSettingTextField.text!, music!]]
         var timerArray: Array = UserDefaults.standard.array(forKey: "TimerData") as? [[String]] ?? [[String]]()
         if timerArray.isEmpty {
             UserDefaults.standard.set(data, forKey: "TimerData")
             
         } else {
             if countdownData != nil {
-                timerArray[(countdownData?.index)!] = data[0]
+                data[0][0] = (countdownData?.index)!
+                timerArray[timerArray.index(where: {$0[0] == countdownData?.index})!] = data[0]
                 
             } else {
+                let index = timerArray.last![0].int! + 1
+                data[0][0] = (index.string)
+                print(data)
                 timerArray.append(contentsOf: data)
             }
             
@@ -100,5 +114,13 @@ extension AlarmSettingViewController: UITextFieldDelegate {
         textField.resignFirstResponder()
         
         return true
+    }
+}
+
+extension AlarmSettingViewController: SendListDataDelegate {
+    
+    func sendData(name: String, id: String) {
+        selectButton.setTitle(name, for: .normal)
+        music = "\(name);\(id)"
     }
 }

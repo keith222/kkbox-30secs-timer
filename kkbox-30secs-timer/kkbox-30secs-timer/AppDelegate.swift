@@ -13,11 +13,10 @@ import KKBOXOpenAPI
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    //var kkboxOpenAPI: KKBOXOpenAPI! = KKBOXOpenAPI(clientID: "80a2ed33da2ce623a17dc82e8f8794e8", secret: "eab1fb05bb589614ad797e6a0f7e5489")
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-
+        
         return true
     }
 

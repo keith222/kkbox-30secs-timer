@@ -15,6 +15,7 @@
 		533583CF1FFBF6F900EF26E5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 533583CD1FFBF6F900EF26E5 /* Main.storyboard */; };
 		533583D11FFBF6F900EF26E5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 533583D01FFBF6F900EF26E5 /* Assets.xcassets */; };
 		533583D41FFBF6F900EF26E5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 533583D21FFBF6F900EF26E5 /* LaunchScreen.storyboard */; };
+		537537DC2003B96B00E45466 /* MusiclistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537537DB2003B96B00E45466 /* MusiclistViewController.swift */; };
 		538947BB1FFE908D005EECC6 /* Timer-Bell.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 538947BA1FFE908D005EECC6 /* Timer-Bell.m4a */; };
 		538947BD1FFE9094005EECC6 /* message-02.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 538947BC1FFE9094005EECC6 /* message-02.m4a */; };
 		538947BF1FFFB57B005EECC6 /* CountdownCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 538947BE1FFFB57B005EECC6 /* CountdownCell.swift */; };
@@ -37,6 +38,7 @@
 		533583CB1FFBF6F900EF26E5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		533583D01FFBF6F900EF26E5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		533583D51FFBF6F900EF26E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		537537DB2003B96B00E45466 /* MusiclistViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusiclistViewController.swift; sourceTree = "<group>"; };
 		538947BA1FFE908D005EECC6 /* Timer-Bell.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Timer-Bell.m4a"; sourceTree = "<group>"; };
 		538947BC1FFE9094005EECC6 /* message-02.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "message-02.m4a"; sourceTree = "<group>"; };
 		538947BE1FFFB57B005EECC6 /* CountdownCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownCell.swift; sourceTree = "<group>"; };
@@ -80,6 +82,7 @@
 				533583CB1FFBF6F900EF26E5 /* ViewController.swift */,
 				5308A4C71FFD2F9300F42DB4 /* AlarmSettingViewController.swift */,
 				5308A4CF1FFE6F3F00F42DB4 /* CountDownViewController.swift */,
+				537537DB2003B96B00E45466 /* MusiclistViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -283,6 +286,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				538947BF1FFFB57B005EECC6 /* CountdownCell.swift in Sources */,
+				537537DC2003B96B00E45466 /* MusiclistViewController.swift in Sources */,
 				5308A4D01FFE6F3F00F42DB4 /* CountDownViewController.swift in Sources */,
 				533583CC1FFBF6F900EF26E5 /* ViewController.swift in Sources */,
 				5308A4CE1FFE652D00F42DB4 /* CircleView.swift in Sources */,
@@ -459,8 +463,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = sparkr.boxtimer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "e4f4ac92-1a5a-48bb-8b62-1294c8585ee4";
-				PROVISIONING_PROFILE_SPECIFIER = "Ad-Hoc BoxTimer";
+				PROVISIONING_PROFILE = "0d4f7dfc-1b11-48e8-841b-ea1b27dfbda0";
+				PROVISIONING_PROFILE_SPECIFIER = BOXTimer;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};

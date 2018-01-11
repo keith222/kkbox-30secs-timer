@@ -11,6 +11,10 @@ import WebKit
 import AVFoundation
 import MediaPlayer
 
+protocol sendTimeData {
+    func sendData()
+}
+
 class CountDownViewController: UIViewController {
 
     @IBOutlet weak var circleView: CircleView!
@@ -18,7 +22,7 @@ class CountDownViewController: UIViewController {
     @IBOutlet var buttonGroup: [UIButton]!
     
     private var oldValue: Float? = 1.0
-    private var timerData: (index: Int, name: String, second: Int, music: String)?
+    private var timerData: (index: String, name: String, second: Int, music: String)?
     fileprivate var isStart: Bool! = false
     fileprivate var timer: Timer?
     fileprivate var webView: WKWebView?
@@ -27,7 +31,7 @@ class CountDownViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         setUp()
     }
     
@@ -41,12 +45,7 @@ class CountDownViewController: UIViewController {
         activityIndicator?.center = circleView.center
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let destination = segue.destination as! AlarmSettingViewController
-        destination.countdownData = (index: timerData!.index, name: timerData!.name, time: timerData!.second.secondToTime(), music: timerData!.music)
-    }
-    
-    func setTimerDate(_ index: Int, name: String, time: String, music: String) {
+    func setTimerDate(_ index: String, name: String, time: String, music: String) {
         timerData = (index: index, name: name, second: time.toSecond(), music: music)
         oldValue = timerData?.second.float
     }
@@ -62,18 +61,16 @@ class CountDownViewController: UIViewController {
         webView?.clipsToBounds = true
         webView?.navigationDelegate = self
         webView?.isHidden = true
-
-        let url = URL(string: "https://widget.kkbox.com/v1/?id=_-gWo_8me1aCGD8S3R&type=playlist&autoplay=true&loop=true")!
+        let url = URL(string: "https://widget.kkbox.com/v1/?id=\(timerData!.music.splitted(by: ";")[1])&type=playlist&autoplay=true&loop=true")!
         webView?.load(URLRequest(url: url))
         view.insertSubview(webView!, belowSubview: circleView)
         
         setAudioPlayer()
         
         activityIndicator = UIActivityIndicatorView(frame: circleView.frame)
-        activityIndicator?.activityIndicatorViewStyle = .whiteLarge
+        activityIndicator?.activityIndicatorViewStyle = .gray
         activityIndicator?.startAnimating()
         view.insertSubview(activityIndicator!, aboveSubview: webView!)
-        
     }
     
     private func setAudioPlayer() {
@@ -86,8 +83,12 @@ class CountDownViewController: UIViewController {
                 
                 soundArray?.append(player)
                 
-            } catch {
-                print(error)
+            } catch let error {
+                let alert = UIAlertController(title: "錯誤", message: error.localizedDescription, preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "確定", style: .cancel, handler: nil))
+                present(alert, animated: true, completion: nil)
+                
+                break
             }
         }
     }
@@ -101,16 +102,13 @@ class CountDownViewController: UIViewController {
             circleView.animateCircle(to: endValue)
             
         } else {
+            webView?.evaluateJavaScript("document.getElementById('audio-player').pause();")
+            
+            soundArray![1].play()
+            
             timer?.invalidate()
             timer = nil
-            
-            webView?.evaluateJavaScript("document.getElementById('audio-player').pause();")
-
-            soundArray![1].play()
         }
-
-
-        
     }
     
     @IBAction func startStopAction(_ sender: UIButton) {
@@ -139,7 +137,7 @@ extension CountDownViewController: WKNavigationDelegate {
         
         webView.evaluateJavaScript("document.getElementsByClassName('widget-cover')[0].style.backgroundSize='240px 240px';document.getElementsByClassName('widget-cover')[0].style.width='240px';document.getElementsByClassName('widget-cover')[0].style.height='240px';document.getElementsByClassName('widget-cover-container')[0].style.padding='0'")
         webView.isHidden = false
-        buttonGroup[1].isEnabled = true
+        buttonGroup[0].isEnabled = true
     }
 }
 
@@ -154,5 +152,11 @@ extension CountDownViewController: AVAudioPlayerDelegate {
         } else {
             dismiss(animated: true, completion: nil)
         }
+    }
+    
+    func audioPlayerDecodeErrorDidOccur(_ player: AVAudioPlayer, error: Error?) {
+        let alert = UIAlertController(title: "錯誤", message: error?.localizedDescription, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "確定", style: .cancel, handler: nil))
+        present(alert, animated: true, completion: nil)
     }
 }

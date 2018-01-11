@@ -11,9 +11,12 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var listTableView: UITableView!
-    @IBOutlet weak var settingButton: UIButton!
     @IBOutlet weak var alertLabel: UILabel!
-    fileprivate var dataArray: [[String]]?
+    fileprivate var dataArray: [[String]]? {
+        didSet {
+            listTableView.reloadData()
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,8 +29,8 @@ class ViewController: UIViewController {
         
         if let timeData = UserDefaults.standard.array(forKey: "TimerData") as? [[String]] {
             dataArray = timeData
-            listTableView.reloadData()
             alertLabel.isHidden = true
+            
         } else {
             listTableView.backgroundColor = .clear
             alertLabel.isHidden = false
@@ -36,19 +39,24 @@ class ViewController: UIViewController {
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        
-        settingButton.layer.cornerRadius = settingButton.frame.width / 2
-        settingButton.clipsToBounds = true
-        
+
         listTableView.tableHeaderView?.size.height = view.frame.height - 70
-    }
+    } 
     
     private func setUp() {
         listTableView.delegate = self
         listTableView.dataSource = self
+        listTableView.rowHeight = UITableViewAutomaticDimension
+        listTableView.estimatedRowHeight = 70
+        listTableView.allowsSelectionDuringEditing = true
         listTableView.tableFooterView = UIView()
-        listTableView.contentInset = UIEdgeInsetsMake(0, 0, 22, 0)
     }
+    
+    @IBAction func editAction(_ sender: UIBarButtonItem) {
+        listTableView.setEditing((sender.title == "編輯"), animated: true)
+        sender.title = (sender.title == "編輯") ? "完成" : "編輯"
+    }
+    
 }
 
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
@@ -59,18 +67,33 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: CountdownCell = tableView.dequeueReusableCell(withIdentifier: "CountdownCell") as! CountdownCell
-        cell.titleLabel.text = dataArray![indexPath.row][0]
-        cell.timeLabel.text = dataArray![indexPath.row][1]
+        cell.titleLabel.text = dataArray![indexPath.row][1]
+        cell.timeLabel.text = dataArray![indexPath.row][2]
         
         return cell
     }
 
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let destination: CountDownViewController = self.storyboard?.instantiateViewController(withIdentifier: "CountDownViewController") as! CountDownViewController
-        destination.setTimerDate(indexPath.row, name: dataArray![indexPath.row][0], time: dataArray![indexPath.row][1], music: dataArray![indexPath.row][2])
-        
-        present(destination, animated: true, completion: nil)
+        if !tableView.isEditing{
+            let destination: CountDownViewController = self.storyboard?.instantiateViewController(withIdentifier: "CountDownViewController") as! CountDownViewController
+            destination.setTimerDate(dataArray![indexPath.row][0], name: dataArray![indexPath.row][1], time: dataArray![indexPath.row][2], music: dataArray![indexPath.row][3])
+            
+            present(destination, animated: true, completion: nil)
+            
+        } else {
+            let destination: AlarmSettingViewController = self.storyboard?.instantiateViewController(withIdentifier: "AlarmSettingViewController") as! AlarmSettingViewController
+            destination.countdownData = (index: dataArray![indexPath.row][0], name: dataArray![indexPath.row][1], time: dataArray![indexPath.row][2], music: dataArray![indexPath.row][3])
+            present(destination, animated: true, completion: nil)
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            dataArray?.remove(at: indexPath.row)
+            UserDefaults.standard.set(dataArray, forKey: "TimerData")
+            tableView.reloadData()
+        }
     }
 }
 

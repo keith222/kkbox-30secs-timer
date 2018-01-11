@@ -29,7 +29,7 @@ class CircleView: UIView {
         
         circleLayer = CAShapeLayer()
         circleLayer.path = circlePath.cgPath
-        circleLayer.strokeColor = UIColor(hexString: "#b0ff00")?.cgColor
+        circleLayer.strokeColor = UIColor(hexString: "#1abc9c")?.cgColor
         circleLayer.fillColor = UIColor.clear.cgColor
         circleLayer.lineWidth = 10.0
         circleLayer.lineCap = "round"
