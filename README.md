@@ -8,4 +8,11 @@
 - [Swift](https://developer.apple.com/swift/)
 - [KKBOX Open API](https://developer.kkbox.com/#/)
 
+## Screen Shot
+![]()
+<img src="https://github.com/keith222/kkbox-30secs-timer/blob/master/screenshot_1.jpg?raw=true" width="250" height="444">
+<img src="https://github.com/keith222/kkbox-30secs-timer/blob/master/screenshot_2.jpg?raw=true" width="250" height="444">
+<img src="https://github.com/keith222/kkbox-30secs-timer/blob/master/screenshot_3.jpg?raw=true" width="250" height="444">
+<img src="https://github.com/keith222/kkbox-30secs-timer/blob/master/screenshot_4.jpg?raw=true" width="250" height="444">
+<img src="https://github.com/keith222/kkbox-30secs-timer/blob/master/screenshot_5.jpg?raw=true" width="250" height="444">
 
