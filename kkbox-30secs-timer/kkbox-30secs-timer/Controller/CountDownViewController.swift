@@ -61,7 +61,7 @@ class CountDownViewController: UIViewController {
         webView?.clipsToBounds = true
         webView?.navigationDelegate = self
         webView?.isHidden = true
-        let url = URL(string: "https://widget.kkbox.com/v1/?id=\(timerData!.music.splitted(by: ";")[1])&type=playlist&autoplay=true&loop=true")!
+        let url = URL(string: "https://widget.kkbox.com/v1/?id=\(timerData!.music.split(separator: ";")[1])&type=playlist&autoplay=true&loop=true")!
         webView?.load(URLRequest(url: url))
         view.insertSubview(webView!, belowSubview: circleView)
         

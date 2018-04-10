@@ -1,20 +1,22 @@
 PODS:
-  - Alamofire (4.5.1)
-  - KKBOXOpenAPI (1.1.5)
-  - ObjectMapper (3.0.0)
-  - SwifterSwift (4.0.1):
-    - SwifterSwift/AppKit (= 4.0.1)
-    - SwifterSwift/CoreGraphics (= 4.0.1)
-    - SwifterSwift/CoreLocation (= 4.0.1)
-    - SwifterSwift/Foundation (= 4.0.1)
-    - SwifterSwift/SwiftStdlib (= 4.0.1)
-    - SwifterSwift/UIKit (= 4.0.1)
-  - SwifterSwift/AppKit (4.0.1)
-  - SwifterSwift/CoreGraphics (4.0.1)
-  - SwifterSwift/CoreLocation (4.0.1)
-  - SwifterSwift/Foundation (4.0.1)
-  - SwifterSwift/SwiftStdlib (4.0.1)
-  - SwifterSwift/UIKit (4.0.1)
+  - Alamofire (4.7.1)
+  - KKBOXOpenAPI (1.1.8)
+  - ObjectMapper (3.1.0)
+  - SwifterSwift (4.2.0):
+    - SwifterSwift/AppKit (= 4.2.0)
+    - SwifterSwift/CoreGraphics (= 4.2.0)
+    - SwifterSwift/CoreLocation (= 4.2.0)
+    - SwifterSwift/Foundation (= 4.2.0)
+    - SwifterSwift/MapKit (= 4.2.0)
+    - SwifterSwift/SwiftStdlib (= 4.2.0)
+    - SwifterSwift/UIKit (= 4.2.0)
+  - SwifterSwift/AppKit (4.2.0)
+  - SwifterSwift/CoreGraphics (4.2.0)
+  - SwifterSwift/CoreLocation (4.2.0)
+  - SwifterSwift/Foundation (4.2.0)
+  - SwifterSwift/MapKit (4.2.0)
+  - SwifterSwift/SwiftStdlib (4.2.0)
+  - SwifterSwift/UIKit (4.2.0)
 
 DEPENDENCIES:
   - Alamofire (~> 4.5)
@@ -28,15 +30,15 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   KKBOXOpenAPI:
-    :commit: c35064d21d598a95eff1c746dc9f79460116dc0a
+    :commit: 8163114d4263be8dac3b14acc2d093b377c8b6e1
     :git: https://github.com/KKBOX/OpenAPI-ObjectiveC.git
 
 SPEC CHECKSUMS:
-  Alamofire: 2d95912bf4c34f164fdfc335872e8c312acaea4a
-  KKBOXOpenAPI: c65278b53cdba3f66f3b3223aef459a9d5482543
-  ObjectMapper: 92230db59bf8f341a5c3a3cf0b9fbdde3cf0d87f
-  SwifterSwift: 5f406a5f831343312d6d5b34282b57ef3f52c40b
+  Alamofire: 68d7d521118d49c615a8d2214d87cdf525599d30
+  KKBOXOpenAPI: c3b65dfaac735182604d7588c4ff6903f72b71e0
+  ObjectMapper: 20505058f54e5c3ca69e1d6de9897d152a5369a6
+  SwifterSwift: 1d101dcfb0c3123226900f3b4d220d57fb60d546
 
-PODFILE CHECKSUM: fdef58ec0bf93e35dcff754444f155b64708edc3
+PODFILE CHECKSUM: ce877422a678a6ab9510742a0976788b35a231a0
 
-COCOAPODS: 1.3.1
+COCOAPODS: 1.4.0
